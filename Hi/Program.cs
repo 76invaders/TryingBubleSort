@@ -22,13 +22,13 @@ void BubleSort(int[] arr)
     foreach (int i in arr)
     {
         count++;
-        for (int a = 0, b = 1, temp; a < numbers.Length - 1; a++, b++)
+        for (int a = 0, temp; a < numbers.Length - 1; a++)
         {
-            if (arr[a] > arr[b])
+            if (arr[a] > arr[a+1])
             {
                 temp = arr[a];
-                arr[a] = arr[b];
-                arr[b] = temp;
+                arr[a] = arr[a+1];
+                arr[a+1] = temp;
                 Print(numbers, count);
             }
         }
